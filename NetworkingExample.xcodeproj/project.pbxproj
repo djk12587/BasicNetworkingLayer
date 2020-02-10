@@ -13,6 +13,11 @@
 		8E867BFB23F1D1F400E89170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E867BF923F1D1F400E89170 /* Main.storyboard */; };
 		8E867BFD23F1D1F400E89170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E867BFC23F1D1F400E89170 /* Assets.xcassets */; };
 		8E867C0023F1D1F400E89170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E867BFE23F1D1F400E89170 /* LaunchScreen.storyboard */; };
+		8E867C0923F1D22300E89170 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E867C0823F1D22300E89170 /* Router.swift */; };
+		8E867C0B23F1E42D00E89170 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E867C0A23F1E42D00E89170 /* API.swift */; };
+		8E867C0E23F1E5E700E89170 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E867C0D23F1E5E700E89170 /* SampleModel.swift */; };
+		8E867C1023F1E68400E89170 /* ResponseSerializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E867C0F23F1E68400E89170 /* ResponseSerializers.swift */; };
+		8E867C1223F1F5B800E89170 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E867C1123F1F5B800E89170 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		8E867BFC23F1D1F400E89170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E867BFF23F1D1F400E89170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E867C0123F1D1F400E89170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E867C0823F1D22300E89170 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8E867C0A23F1E42D00E89170 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8E867C0D23F1E5E700E89170 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		8E867C0F23F1E68400E89170 /* ResponseSerializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerializers.swift; sourceTree = "<group>"; };
+		8E867C1123F1F5B800E89170 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 		8E867BF223F1D1F400E89170 /* NetworkingExample */ = {
 			isa = PBXGroup;
 			children = (
+				8E867C0C23F1E5D800E89170 /* Models */,
+				8E867C0723F1D20200E89170 /* Networking */,
 				8E867BF323F1D1F400E89170 /* AppDelegate.swift */,
 				8E867BF523F1D1F400E89170 /* SceneDelegate.swift */,
 				8E867BF723F1D1F400E89170 /* ViewController.swift */,
@@ -65,6 +77,25 @@
 				8E867C0123F1D1F400E89170 /* Info.plist */,
 			);
 			path = NetworkingExample;
+			sourceTree = "<group>";
+		};
+		8E867C0723F1D20200E89170 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8E867C0A23F1E42D00E89170 /* API.swift */,
+				8E867C1123F1F5B800E89170 /* Networking.swift */,
+				8E867C0F23F1E68400E89170 /* ResponseSerializers.swift */,
+				8E867C0823F1D22300E89170 /* Router.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8E867C0C23F1E5D800E89170 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E867C0D23F1E5E700E89170 /* SampleModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E867C0923F1D22300E89170 /* Router.swift in Sources */,
+				8E867C1023F1E68400E89170 /* ResponseSerializers.swift in Sources */,
+				8E867C0E23F1E5E700E89170 /* SampleModel.swift in Sources */,
+				8E867C1223F1F5B800E89170 /* Networking.swift in Sources */,
 				8E867BF823F1D1F400E89170 /* ViewController.swift in Sources */,
 				8E867BF423F1D1F400E89170 /* AppDelegate.swift in Sources */,
 				8E867BF623F1D1F400E89170 /* SceneDelegate.swift in Sources */,
+				8E867C0B23F1E42D00E89170 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
