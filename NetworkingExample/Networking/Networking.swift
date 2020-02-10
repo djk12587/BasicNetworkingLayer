@@ -16,19 +16,20 @@ extension NetworkRouterCodable {
             let request = try asURLRequest()
             session.dataTask(with: request) { (responseData, response, error) in
                 if let error = error {
-                    completion(.failure(error))
+                    DispatchQueue.main.async { completion(.failure(error)) }
                     return
                 } else if let responseData = responseData {
-                    completion(responseData.serializeModel())
+                    let serializedResponse: Result<ModelType, Error> = responseData.serializeModel()
+                    DispatchQueue.main.async { completion(serializedResponse) }
                 }
                 else {
-                    completion(.failure(NetworkingError.invalidRequest))
+                    DispatchQueue.main.async { completion(.failure(NetworkingError.invalidRequest)) }
                 }
             }
             return request
 
         } catch let error {
-            completion(.failure(error))
+            DispatchQueue.main.async { completion(.failure(error)) }
             return nil
         }
     }
@@ -39,19 +40,20 @@ extension NetworkRouterCodable {
             let request = try asURLRequest()
             session.dataTask(with: request) { (responseData, response, error) in
                 if let error = error {
-                    completion(.failure(error))
+                    DispatchQueue.main.async { completion(.failure(error)) }
                     return
                 } else if let responseData = responseData {
-                    completion(responseData.serializeModels())
+                    let serializedResponse: Result<[ModelType], Error> = responseData.serializeModels()
+                    DispatchQueue.main.async { completion(serializedResponse) }
                 }
                 else {
-                    completion(.failure(NetworkingError.invalidRequest))
+                    DispatchQueue.main.async { completion(.failure(NetworkingError.invalidRequest)) }
                 }
             }
             return request
 
         } catch let error {
-            completion(.failure(error))
+            DispatchQueue.main.async { completion(.failure(error)) }
             return nil
         }
     }
